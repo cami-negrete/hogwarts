@@ -1,0 +1,12 @@
+<h1>Personajes Hogwarts</h1>
+
+<ul>
+ <% @characters.each do |a| %>
+    <li>
+      <strong>Personaje:</strong> <%= a.name%> <br>
+      <strong>Locación:</strong> <%= a.location%> <br>
+      <strong>Casa:</strong> <%= a.house %>
+    </li>
+    <hr>
+  <% end %>
+</ul>

@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: hogwarts_development
+  username: postgres
+  password: 2104Amazul
+  port: 5432
+
+ 
+test:
+  <<: *default
+  database: hogwarts_test
+  username: postgres
+  password: 2104Amazul
+  port: 5432
+
+production:
+  <<: *default
+  database: hogwarts_production
+  username: hogwarts
+  password: <%= ENV["HOGWARTS_DATABASE_PASSWORD"] %>
