@@ -1,12 +1,21 @@
-<h1>Personajes Hogwarts</h1>
+<h1 class="my-5">Personajes Hogwarts</h1>
 
-<ul>
- <% @characters.each do |a| %>
-    <li>
-      <strong>Personaje:</strong> <%= a.name%> <br>
-      <strong>Locación:</strong> <%= a.location%> <br>
-      <strong>Casa:</strong> <%= a.house %>
-    </li>
-    <hr>
+
+<table class="table caption-top">
+  <thead>
+    <tr>
+      <th scope="col">Personaje:</th>
+      <th scope="col">Locación:</th>
+      <th scope="col">Casa:</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @characters.each do |a| %>
+    <tr>
+      <td><%= a.name%></td>
+      <td><%= a.location%></td>
+      <td><%= a.house %></td>
+    </tr>
   <% end %>
-</ul>
+  </tbody>
+</table>
